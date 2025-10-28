@@ -1,41 +1,67 @@
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react"
+import React from 'react'
 
 const footerLinks = {
-  Products: ["NuraTrue Pro", "NuraTrue", "NuraPhone", "NuraLoop", "Accessories"],
-  Support: ["Help Center", "Contact Us", "Shipping", "Returns", "Warranty"],
-  Company: ["About Us", "Careers", "Press", "Blog", "Affiliate Program"],
-  Legal: ["Privacy Policy", "Terms of Service", "Cookie Policy"]
+  SHOP: [
+    "NuraTrue Pro",
+    "Audio Transmitter",
+    "NuraTrue",
+    "NuraBuds",
+    "Nuraphone",
+    "NuraLoop",
+    "Accessories",
+    "Subscription"
+  ],
+  INFO: [
+    "Why Nura?",
+    "Shipping",
+    "Returns",
+    "Warranty",
+    "Patents"
+  ],
+  SUPPORT: [
+    "Help Centre",
+    "Contact Us"
+  ],
+  SOCIALS: [
+    "Instagram",
+    "Facebook",
+    "YouTube",
+    "Tidal",
+    "Twitter",
+    "Discord"
+  ]
 }
-
-const socialLinks = [
-  { icon: Facebook, href: "#" },
-  { icon: Instagram, href: "#" },
-  { icon: Twitter, href: "#" },
-  { icon: Youtube, href: "#" }
-]
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-400 py-12 px-4">
-      <div className="container mx-auto">
-        {/* Logo */}
-        <div className="mb-8">
-          <h2 className="text-white text-2xl font-bold">nura</h2>
-        </div>
+    <footer className="bg-black text-gray-400 py-16 px-4">
+      <div className="container mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
+          {/* Logo and Description */}
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-2 mb-6">
+              <svg className="w-8 h-8 text-white" viewBox="0 0 40 40" fill="currentColor">
+                <path d="M20 8C16 8 12 10 10 14C8 18 8 22 10 26C12 30 16 32 20 32C22 32 24 32 26 30L20 20L26 10C24 8 22 8 20 8Z" />
+              </svg>
+              <h2 className="text-white text-2xl font-bold">nura</h2>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Nura designs headphones tuned to you. Bringing you closer to music with personalised sound.
+            </p>
+          </div>
 
-        {/* Footer Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+          {/* Footer Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h3 className="text-white font-semibold mb-4 text-sm">
+              <h3 className="text-gray-500 font-semibold mb-4 text-xs uppercase tracking-wider">
                 {category}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-xs hover:text-white transition-colors"
+                      className="text-white text-sm hover:text-gray-300 transition-colors"
                     >
                       {link}
                     </a>
@@ -46,32 +72,19 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Social Links */}
-        <div className="flex gap-6 mb-8">
-          {socialLinks.map((social, index) => (
-            <a
-              key={index}
-              href={social.href}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <social.icon className="w-5 h-5" />
-            </a>
-          ))}
-        </div>
-
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-            <p>© 2024 Nura. All rights reserved.</p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+            <p>Copyright © 2022 Nura Operations Pty Ltd. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-white transition-colors">
-                Privacy
+              <a href="#" className="hover:text-gray-400 transition-colors">
+                Privacy Policy
               </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Terms
+              <a href="#" className="hover:text-gray-400 transition-colors">
+                Terms of Use
               </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Cookies
+              <a href="#" className="hover:text-gray-400 transition-colors">
+                Legal
               </a>
             </div>
           </div>

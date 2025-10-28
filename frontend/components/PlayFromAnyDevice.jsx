@@ -1,65 +1,54 @@
-import { Smartphone, Tv, Laptop, Music } from "lucide-react"
-
-
-
-const devices = [
-  { icon: Smartphone, label: "Mobile" },
-  { icon: Laptop, label: "Desktop" },
-  { icon: Tv, label: "TV" },
-  { icon: Music, label: "Audio" }
-]
+import React from 'react'
 
 export default function PlayFromAnyDevice() {
   return (
-    <section className="bg-[#0a0a0a] py-16 px-4">
-      <div className="container mx-auto max-w-4xl">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-white text-4xl font-bold mb-4">
+    <section className="relative bg-black py-20 px-4 overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 opacity-40"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1920&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+      </div>
+
+      {/* Phone Mockup - Left Side */}
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-64 md:w-80 opacity-60">
+        <div className="relative">
+          {/* Phone Frame */}
+          <div className="bg-black rounded-[50px] shadow-2xl p-3">
+            {/* Notch */}
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-3xl z-20"></div>
+            
+            {/* Screen */}
+            <div className="relative w-full aspect-[9/19] bg-white rounded-[42px] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=400&q=80"
+                alt="Nura App"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto max-w-6xl">
+        <div className="ml-auto max-w-xl text-right md:text-left md:pl-64">
+          <h2 className="text-white text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Play from<br />any device.
           </h2>
-          <p className="text-gray-400 text-sm">
-            Seamlessly connect to all your devices and enjoy your personalized sound anywhere.
-          </p>
-        </div>
-
-        {/* Device Icons */}
-        <div className="flex justify-center gap-8 mb-12">
-          {devices.map((device, index) => (
-            <div key={index} className="flex flex-col items-center gap-2">
-              <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center">
-                <device.icon className="w-8 h-8 text-gray-300" />
-              </div>
-              <span className="text-gray-400 text-xs">{device.label}</span>
-            </div>
-          ))}
-        </div>
-
-        {/* Subscription Card */}
-        <div className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-700 p-8 text-center">
-          <h3 className="text-white text-2xl font-bold mb-2">
-            A sound subscription.
-          </h3>
-          <p className="text-gray-400 text-sm mb-6">
-            Access to all Nura products and features with one monthly subscription.
+          
+          <p className="text-white/90 mb-4 text-lg leading-relaxed">
+            Your hearing profile is <span className="text-green-400 font-semibold">stored on the earbuds</span>, and is applied to whatever you listen to, <span className="text-green-400 font-semibold">on any device</span>.
           </p>
           
-          <div className="mb-6">
-            <div className="text-white text-5xl font-bold mb-2">
-              $9.99
-              <span className="text-2xl text-gray-400 font-normal">/mo</span>
-            </div>
-            <p className="text-gray-500 text-xs">
-              Cancel anytime. First month free.
-            </p>
-          </div>
-
-          <button 
-            size="lg" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 rounded-full"
-          >
-            EXPLORE NURANOW
-          </button>
+          <p className="text-white/90 text-lg leading-relaxed">
+            Use the Nura app to create a hearing profile, configure touch buttons, adjust immersion mode and more.
+          </p>
         </div>
       </div>
     </section>
