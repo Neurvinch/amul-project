@@ -17,7 +17,7 @@ const MobileAppSection = () => {
           <div className="relative flex justify-center">
             <div className="relative w-[280px] h-[560px] bg-blue-600 rounded-[40px] p-3 shadow-2xl">
               <div className="relative w-full h-full bg-white rounded-[32px] overflow-hidden">
-                <Image
+                <image
                   src="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=400&q=80"
                   alt="Nura App Interface"
                   fill
