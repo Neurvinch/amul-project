@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const HeroSection = () => {
   return (
         <div className="relative min-h-[600px] bg-gradient-to-br from-pink-600 via-pink-500 to-purple-600 overflow-hidden">
