@@ -15,7 +15,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center text-center">
           {/* Product Image */}
           <div className="relative w-full max-w-2xl aspect-[16/9] mb-8">
-            <Image
+            <image
               src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&q=80"
               alt="Nura Headphones"
               fill
