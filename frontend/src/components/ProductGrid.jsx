@@ -44,7 +44,7 @@ export default function ProductGrid() {
   return (
     <section className="bg-[rgba(23,23,23,1)]
  py-16 px-4">
-      <div className="container mx-auto  bg-[rgba(229, 229, 229, 1)]">
+      <div className="container mx-auto  bg-[rgba(229, 229, 229, 1)] font-space-grotesk">
         {/* Header */}
         <div className="flex items-center justify-between mb-10">
           <h2 className="text-white text-3xl md:text-7xl font-light">
@@ -61,24 +61,20 @@ export default function ProductGrid() {
             <div key={product.id} className="bg-gray-200 rounded-[20px] overflow-hidden group cursor-pointer transition-transform hover:scale-105 border border-gray-200 shadow-sm flex flex-col h-full max-w-[320px] w-full mx-auto">
               {/* Discount Badge */}
               <div className="relative">
-                <div
-                  className="absolute top-[29.67px] left-[25.03px] z-10 rounded-[100px] w-[93.890625px] h-[93.890625px] flex flex-col items-center justify-center text-center shadow-lg"
+                <div className="absolute top-[29.67px] left-[25.03px] z-10 w-[93.890625px] h-[93.890625px] rounded-full shadow-lg p-[3px]"
                   style={{
-                    background: "#000000",
-                    borderWidth: "3px",
-                    borderStyle: "solid",
-                    borderImageSource:
-                      "linear-gradient(135deg, #EB48F7 0%, #F8D481 60%, #CCFF02 100%)",
-                    borderImageSlice: 1,
+                    background: "linear-gradient(135deg, #EB48F7 0%, #F8D481 60%, #CCFF02 100%)",
                     boxShadow: "6px 5px 7px 0px #00000029"
                   }}
                 >
-                  <span className="text-2xl font-bold leading-none text-transparent bg-clip-text bg-gradient-to-br from-[#EB48F7] via-[#F8D481] to-[#CCFF02]">
-                    {product.discount}
-                  </span>
-                  <span className="text-sm font-semibold leading-none text-transparent bg-clip-text bg-gradient-to-br from-[#EB48F7] via-[#F8D481] to-[#CCFF02]">
-                    OFF
-                  </span>
+                  <div className="w-full h-full rounded-full bg-black flex flex-col items-center justify-center text-center">
+                    <span className="text-2xl font-bold leading-none text-transparent bg-clip-text bg-gradient-to-br from-[#EB48F7] via-[#F8D481] to-[#CCFF02]">
+                      {product.discount}
+                    </span>
+                    <span className="text-sm font-semibold leading-none text-transparent bg-clip-text bg-gradient-to-br from-[#EB48F7] via-[#F8D481] to-[#CCFF02]">
+                      OFF
+                    </span>
+                  </div>
                 </div>
                 
                 {/* Product Image */}
