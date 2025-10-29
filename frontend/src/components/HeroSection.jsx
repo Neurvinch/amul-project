@@ -20,7 +20,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-28 md:pt-40 pb-20">
+      <div className="relative z-10 container mx-auto px-4 pt-44 md:pt-60 lg:pt-72 pb-20">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Small Heading */}
           <p className="text-white text-xl md:text-4xl font-extralight tracking-wider mb-6 uppercase">
