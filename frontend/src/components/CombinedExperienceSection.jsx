@@ -22,7 +22,7 @@ export default function CombinedExperienceSection() {
         <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-10 items-center">
           {/* Phone Mockup */}
           <div className="relative flex justify-center md:justify-start">
-            <div className="relative w-[300px] h-[600px] md:w-[340px] md:h-[680px]">
+            <div className="relative w-[360px] h-[720px] md:w-[420px] md:h-[840px]">
               <div className="absolute inset-0 bg-black rounded-[50px] shadow-2xl p-3">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-black rounded-b-3xl z-20" />
                 <div className="relative w-full h-full bg-white rounded-[42px] overflow-hidden">
