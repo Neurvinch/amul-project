@@ -56,11 +56,11 @@ export default function CombinedExperienceSection() {
       </div>
 
       {/* Block 2: Play from any device. */}
-      <div className="relative py-20 md:py-24 px-4 overflow-hidden">
+      <div className="relative py-20 md:py-24 px-4 overflow-hidden bg-[#171717]">
         {/* Background image (Block 2) with specified layout */}
         <div className="absolute inset-0">
           <div
-            className="absolute top-1/2 -translate-y-1/2 left-[-366.81px] w-[676.03125px] h-[877.625px] bg-cover bg-center opacity-100"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[560px] h-[420px] bg-cover bg-center opacity-100 rounded"
             style={{ backgroundImage: `url(${Block2BG})` }}
           />
           <div className="absolute inset-0 " />

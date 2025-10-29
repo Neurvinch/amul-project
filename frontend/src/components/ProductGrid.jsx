@@ -62,20 +62,23 @@ export default function ProductGrid() {
               {/* Discount Badge */}
               <div className="relative">
                 <div
-                  className="absolute top-[29.67px] left-[25.03px] z-10 text-white rounded-[100px] w-[93.890625px] h-[93.890625px] flex flex-col items-center justify-center text-center shadow-lg"
+                  className="absolute top-[29.67px] left-[25.03px] z-10 rounded-[100px] w-[93.890625px] h-[93.890625px] flex flex-col items-center justify-center text-center shadow-lg"
                   style={{
-                    background:
-                      "linear-gradient(123.72deg, #EB48F7 0.69%, #F8D481 63.6%, #CCFF02 102.35%)",
-                    borderWidth: "2.13px",
+                    background: "#000000",
+                    borderWidth: "3px",
                     borderStyle: "solid",
                     borderImageSource:
-                      "linear-gradient(126.11deg, #EB48F7 3.36%, #F8D481 62.87%, #CCFF02 99.53%)",
+                      "linear-gradient(135deg, #EB48F7 0%, #F8D481 60%, #CCFF02 100%)",
                     borderImageSlice: 1,
                     boxShadow: "6px 5px 7px 0px #00000029"
                   }}
                 >
-                  <span className="text-lg font-bold leading-none">{product.discount}</span>
-                  <span className="text-xs font-semibold leading-none">OFF</span>
+                  <span className="text-2xl font-bold leading-none text-transparent bg-clip-text bg-gradient-to-br from-[#EB48F7] via-[#F8D481] to-[#CCFF02]">
+                    {product.discount}
+                  </span>
+                  <span className="text-sm font-semibold leading-none text-transparent bg-clip-text bg-gradient-to-br from-[#EB48F7] via-[#F8D481] to-[#CCFF02]">
+                    OFF
+                  </span>
                 </div>
                 
                 {/* Product Image */}
