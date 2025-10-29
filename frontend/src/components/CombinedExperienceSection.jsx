@@ -22,7 +22,7 @@ export default function CombinedExperienceSection() {
         <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-10 items-center">
           {/* Phone Mockup */}
           <div className="relative flex justify-center md:justify-start z-20">
-            <div className="relative w-[360px] h-[720px] md:w-[420px] md:h-[980px] translate-y-[12%] md:translate-y-[10%]">
+            <div className="relative w-[85vw] max-w-[360px] md:w-[420px] aspect-[9/19] md:aspect-[9/21] translate-y-0 md:translate-y-[10%]">
               <div className="absolute inset-0 bg-black rounded-[50px] shadow-2xl p-3">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-black rounded-b-3xl z-20" />
                 <div className="relative w-full h-full bg-white rounded-[42px] overflow-hidden">
@@ -37,7 +37,7 @@ export default function CombinedExperienceSection() {
           </div>
 
           {/* Content */}
-          <div className="text-white z-60 font-space-grotesk w-[600px]">
+          <div className="text-white z-60 font-space-grotesk max-w-[90vw] md:max-w-[600px]">
             <h2 className="font-space-grotesk text-4xl md:text-6xl font-semibold mb-6 leading-tight">
               For your<br />ears only.
             </h2>
@@ -60,7 +60,7 @@ export default function CombinedExperienceSection() {
         {/* Background image (Block 2) with specified layout */}
         <div className="absolute inset-0">
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[670px] bg-cover bg-center opacity-100 rounded"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] max-w-[700px] md:w-[700px] md:h-[670px] bg-cover bg-center opacity-100 rounded"
             style={{ backgroundImage: `url(${Block2BG})` }}
           />
           <div className="absolute inset-0 " />
@@ -82,11 +82,11 @@ export default function CombinedExperienceSection() {
           {/* </div> */}
         {/* </div> */}
 
-        {/* Content aligned to the right of the centered image */}
-        <div className="absolute inset-0 z-10 flex items-center justify-center">
-          {/* Anchor at image center, then nudge text to the right */}
-          <div className="relative top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
-            <div className="translate-x-[-60px] w-[540px] translate-y-[-180px] ">
+        {/* Content aligned relative on mobile, overlaid on md+ */}
+        <div className="z-10 flex items-center justify-center md:absolute md:inset-0">
+          {/* Anchor at image center on md+, normal flow on mobile */}
+          <div className="md:relative md:top-1/2 md:left-1/2 md:-translate-y-1/2 md:-translate-x-1/2">
+            <div className="w-[90vw] max-w-[600px] md:w-[540px] md:translate-x-[-60px] md:translate-y-[-180px]">
               <h2 className="font-space-grotesk text-white text-6xl md:text-7xl font-semibold mb-6 leading-tight">
                 Play from<br />any device.
               </h2>
