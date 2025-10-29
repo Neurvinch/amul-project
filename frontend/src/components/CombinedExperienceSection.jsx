@@ -10,7 +10,7 @@ export default function CombinedExperienceSection() {
   return (
     <section>
       {/* Block 1: For your ears only. */}
-      <div className="relative py-16 md:py-24 px-4 overflow-hidden">
+      <div className="relative py-16 md:py-0 px-1 overflow-visible">
         {/* Background Gradient for Block 1 */}
         <div
           className="absolute inset-0"
@@ -21,8 +21,8 @@ export default function CombinedExperienceSection() {
         />
         <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-10 items-center">
           {/* Phone Mockup */}
-          <div className="relative flex justify-center md:justify-start">
-            <div className="relative w-[360px] h-[720px] md:w-[420px] md:h-[840px]">
+          <div className="relative flex justify-center md:justify-start z-20">
+            <div className="relative w-[360px] h-[720px] md:w-[420px] md:h-[980px] translate-y-[12%] md:translate-y-[10%]">
               <div className="absolute inset-0 bg-black rounded-[50px] shadow-2xl p-3">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-black rounded-b-3xl z-20" />
                 <div className="relative w-full h-full bg-white rounded-[42px] overflow-hidden">
@@ -60,7 +60,7 @@ export default function CombinedExperienceSection() {
         {/* Background image (Block 2) with specified layout */}
         <div className="absolute inset-0">
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[800px] bg-cover bg-center opacity-100 rounded"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[670px] bg-cover bg-center opacity-100 rounded"
             style={{ backgroundImage: `url(${Block2BG})` }}
           />
           <div className="absolute inset-0 " />
@@ -86,7 +86,7 @@ export default function CombinedExperienceSection() {
         <div className="absolute inset-0 z-10 flex items-center justify-center">
           {/* Anchor at image center, then nudge text to the right */}
           <div className="relative top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
-            <div className="translate-x-[-60px] w-[540px] translate-y-[-180px]">
+            <div className="translate-x-[-60px] w-[540px] translate-y-[-180px] ">
               <h2 className="font-space-grotesk text-white text-6xl md:text-7xl font-semibold mb-6 leading-tight">
                 Play from<br />any device.
               </h2>
