@@ -4,7 +4,7 @@ import Background from '../assets/44b68064664628a2db7b4fd033a5752ceffeaeeb.jpg'
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-[600px] md:min-h-[700px] overflow-hidden width: 1440 height: 810 angle: 0 deg opacity: 1 font-space-grotesk">
+    <div className="relative min-h-[600px] md:min-h-[700px] overflow-hidden font-space-grotesk">
       {/* Background Image */}
 
 
@@ -20,7 +20,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto mt-90 px-4 pt-32 md:pt-40 pb-20">
+      <div className="relative z-10 container mx-auto px-4 pt-28 md:pt-40 pb-20">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Small Heading */}
           <p className="text-white text-xl md:text-4xl font-extralight tracking-wider mb-6 uppercase">
@@ -28,7 +28,7 @@ const HeroSection = () => {
           </p>
 
           {/* Main Heading */}
-          <h1 className="text-white  text-4xl md:text-7xl lg:text-8xl font-semibold mb-4 leading-tight w-[1400px]">
+          <h1 className="text-white text-4xl md:text-7xl lg:text-8xl font-semibold mb-4 leading-tight max-w-[90vw] md:max-w-4xl break-words">
             Black Friday Starts Now!
           </h1>
 

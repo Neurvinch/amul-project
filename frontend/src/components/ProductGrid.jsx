@@ -56,9 +56,67 @@ export default function ProductGrid() {
           </button>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6  ">
+        {/* Mobile slider */}
+        <div className="md:hidden -mx-4 px-4">
+          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-4 pb-2">
+            {products.map((product) => (
+              <div key={product.id} className="snap-center shrink-0 min-w-[85%] max-w-[420px]">
+                <div className="bg-gray-200 rounded-[20px] overflow-hidden group cursor-pointer transition-transform hover:scale-105 border border-gray-200 shadow-sm flex flex-col h-full w-full mx-auto">
+                  {/* Discount Badge */}
+                  <div className="relative">
+                    <div className="absolute top-[29.67px] left-[25.03px] z-10 w-[93.890625px] h-[93.890625px] rounded-full shadow-lg p-[3px]"
+                      style={{
+                        background: "linear-gradient(135deg, #EB48F7 0%, #F8D481 60%, #CCFF02 100%)",
+                        boxShadow: "6px 5px 7px 0px #00000029"
+                      }}
+                    >
+                      <div className="w-full h-full rounded-full bg-black flex flex-col items-center justify-center text-center">
+                        <span className="text-2xl font-bold leading-none text-transparent bg-clip-text bg-gradient-to-br from-[#EB48F7] via-[#F8D481] to-[#CCFF02]">
+                          {product.discount}
+                        </span>
+                        <span className="text-sm font-semibold leading-none text-transparent bg-clip-text bg-gradient-to-br from-[#EB48F7] via-[#F8D481] to-[#CCFF02]">
+                          OFF
+                        </span>
+                      </div>
+                    </div>
+                    {/* Product Image */}
+                    <div className="relative bg-gray-200 flex items-start justify-center p-8 rounded-[20px]">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-auto opacity-100 rounded-[20px] object-contain"
+                      />
+                    </div>
+                  </div>
+                  {/* Product Info */}
+                  <div className="p-6 text-center flex flex-col flex-1">
+                    <h3 className="font-space-grotesk text-[28px] leading-[28px] font-medium tracking-[-0.84px] text-gray-900 mb-3 min-h-[3rem] flex items-center justify-center text-center align-middle">
+                      {product.name}
+                    </h3>
+                    <div className="flex items-center justify-center gap-2 mb-4">
+                      <span className="text-sm text-gray-400 line-through">
+                        {product.originalPrice}
+                      </span>
+                      <span className="font-bai-jamjuree text-[16px] leading-[16px] font-semibold tracking-[0] text-gray-900 text-center align-middle">
+                        {product.salePrice}
+                      </span>
+                    </div>
+                    {/* Shop Now Button */}
+                    <button className="mt-auto w-full bg-[#3333F5] hover:bg-[#3333F5] text-white font-semibold py-3 px-6 rounded-full transition-colors flex items-center justify-center gap-2">
+                      SHOP NOW
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop/Grid */}
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
-            <div key={product.id} className="bg-gray-200 rounded-[20px] overflow-hidden group cursor-pointer transition-transform hover:scale-105 border border-gray-200 shadow-sm flex flex-col h-full max-w-[320px] w-full mx-auto">
+            <div key={product.id} className="bg-gray-200 rounded-[20px] overflow-hidden group cursor-pointer transition-transform hover:scale-105 border border-gray-200 shadow-sm flex flex-col h-full w-full">
               {/* Discount Badge */}
               <div className="relative">
                 <div className="absolute top-[29.67px] left-[25.03px] z-10 w-[93.890625px] h-[93.890625px] rounded-full shadow-lg p-[3px]"
@@ -76,17 +134,15 @@ export default function ProductGrid() {
                     </span>
                   </div>
                 </div>
-                
                 {/* Product Image */}
-                <div className="relative bg-gray-200 flex items-start justify-center p-8 w-[370px] h-[340.46875px] rounded-[20px]  ">
+                <div className="relative bg-gray-200 flex items-start justify-center p-8 rounded-[20px]">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-[370px] h-[305.46875px] opacity-100 rounded-[20px] rotate-0 object-fill"
+                    className="w-full h-auto opacity-100 rounded-[20px] object-contain"
                   />
                 </div>
               </div>
-
               {/* Product Info */}
               <div className="p-6 text-center flex flex-col flex-1">
                 <h3 className="font-space-grotesk text-[28px] leading-[28px] font-medium tracking-[-0.84px] text-gray-900 mb-3 min-h-[3rem] flex items-center justify-center text-center align-middle">
@@ -99,9 +155,7 @@ export default function ProductGrid() {
                   <span className="font-bai-jamjuree text-[16px] leading-[16px] font-semibold tracking-[0] text-gray-900 text-center align-middle">
                     {product.salePrice}
                   </span>
-                  
                 </div>
-                
                 {/* Shop Now Button */}
                 <button className="mt-auto w-full bg-[#3333F5] hover:bg-[#3333F5] text-white font-semibold py-3 px-6 rounded-full transition-colors flex items-center justify-center gap-2">
                   SHOP NOW

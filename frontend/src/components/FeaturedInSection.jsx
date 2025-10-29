@@ -15,20 +15,23 @@ const FeaturedInSection = () => {
           </h2>
         </div>
 
-        {/* Logo Grid */}
-        <div className="max-w-8xl mx-auto">
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 gap-8 items-center justify-items-center">
+        {/* Mobile Slider */}
+        <div className="md:hidden">
+          <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-px-4 no-scrollbar">
             {mediaLogos.map((src, index) => (
-              <div
-                key={index}
-                className="relative w-[210px] h-[116.421875px] opacity-100"
-                style={{ left: '4.55px' }}
-              >
-                <img
-                  src={src}
-                  alt={`logo-${index}`}
-                  className="w-[210px] h-[116.421875px] object-contain"
-                />
+              <div key={index} className="snap-center shrink-0 flex items-center justify-center min-w-[160px] h-24">
+                <img src={src} alt={`logo-${index}`} className="h-16 w-auto object-contain" />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop/Grid Layout */}
+        <div className="hidden md:block max-w-8xl mx-auto">
+          <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-7 gap-8 items-center justify-items-center">
+            {mediaLogos.map((src, index) => (
+              <div key={index} className="flex items-center justify-center h-24">
+                <img src={src} alt={`logo-${index}`} className="max-h-16 w-auto object-contain" />
               </div>
             ))}
           </div>
