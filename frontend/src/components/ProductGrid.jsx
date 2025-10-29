@@ -78,7 +78,7 @@ export default function ProductGrid() {
                 </div>
                 
                 {/* Product Image */}
-                <div className="relative bg-gray-200 flex items-start justify-center p-8 w-[370px] h-[305.46875px] rounded-[20px]  ">
+                <div className="relative bg-gray-200 flex items-start justify-center p-8 w-[370px] h-[340.46875px] rounded-[20px]  ">
                   <img
                     src={product.image}
                     alt={product.name}

@@ -16,15 +16,20 @@ const FeaturedInSection = () => {
         </div>
 
         {/* Logo Grid */}
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-8xl mx-auto">
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 gap-8 items-center justify-items-center">
             {mediaLogos.map((src, index) => (
-              <img
+              <div
                 key={index}
-                src={src}
-                alt={`logo-${index}`}
-                className="h-6 sm:h-8 object-contain opacity-70 hover:opacity-100 transition-opacity"
-              />
+                className="relative w-[210px] h-[116.421875px] opacity-100"
+                style={{ left: '4.55px' }}
+              >
+                <img
+                  src={src}
+                  alt={`logo-${index}`}
+                  className="w-[210px] h-[116.421875px] object-contain"
+                />
+              </div>
             ))}
           </div>
         </div>

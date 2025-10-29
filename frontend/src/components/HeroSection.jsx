@@ -4,7 +4,7 @@ import Background from '../assets/44b68064664628a2db7b4fd033a5752ceffeaeeb.jpg'
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-[600px] md:min-h-[700px] overflow-hidden width: 1440 height: 810 angle: 0 deg opacity: 1">
+    <div className="relative min-h-[600px] md:min-h-[700px] overflow-hidden width: 1440 height: 810 angle: 0 deg opacity: 1 font-space-grotesk">
       {/* Background Image */}
 
 
