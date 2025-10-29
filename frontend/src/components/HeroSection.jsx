@@ -23,12 +23,12 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto mt-90 px-4 pt-32 md:pt-40 pb-20">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Small Heading */}
-          <p className="text-white text-xl md:text-2xl font-light tracking-wider mb-6 uppercase">
+          <p className="text-white text-xl md:text-4xl font-extralight tracking-wider mb-6 uppercase">
             OUR BIGGEST SALE NOW LIVE
           </p>
 
           {/* Main Heading */}
-          <h1 className="text-white  text-4xl md:text-7xl lg:text-8xl font-bold mb-4 leading-tight">
+          <h1 className="text-white  text-4xl md:text-7xl lg:text-8xl font-semibold mb-4 leading-tight w-[1400px]">
             Black Friday Starts Now!
           </h1>
 
