@@ -31,7 +31,7 @@ const FeaturedInSection = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-green-400 text-sm font-semibold tracking-wider uppercase">
+          <h2 className="font-space-grotesk text-[#7DFB5D] text-[24px] leading-[24px] font-normal tracking-[0] uppercase text-center align-middle">
             AS FEATURED IN
           </h2>
         </div>

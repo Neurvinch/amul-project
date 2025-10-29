@@ -36,7 +36,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-gray-400 py-16 px-4">
       <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-16 mb-16 items-start ">
           {/* Logo and Description */}
           <div className="md:col-span-1 w-[354.234375px] h-[312px]">
             <div className="flex items-center gap-2 mb-6">
@@ -52,8 +52,8 @@ export default function Footer() {
 
           {/* Footer Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category} className="w-[239.4375px] h-[312px]">
-              <h3 className="text-gray-500 font-semibold mb-4 text-xs uppercase tracking-wider">
+            <div key={category} className="w-[239.4375px] h-[312px] ml-4 md:ml-20">
+              <h3 className="text-gray-500 font-space-grotesk mb-4 text-[20px] uppercase tracking-wider">
                 {category}
               </h3>
               <ul className="space-y-3">
@@ -61,8 +61,7 @@ export default function Footer() {
                   <li key={link}>
                     <a
                       href="#"
-                      className="font-space-grotesk text-[20px] leading-[20px] font-normal tracking-[0] align-middle inline-flex items-center justify-center rounded-md text-[#EBEBEB] hover:opacity-90 transition-opacity"
-                      style={{ width: '73.29374694824219px', height: '26px', opacity: 1 }}
+                      className="font-space-grotesk block text-[20px] leading-[28px] font-light tracking-[0] text-[#EBEBEB] hover:text-gray-300 transition-colors"
                     >
                       {link}
                     </a>
