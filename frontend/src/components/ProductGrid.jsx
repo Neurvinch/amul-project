@@ -58,7 +58,7 @@ export default function ProductGrid() {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6  ">
           {products.map((product) => (
-            <div key={product.id} className="bg-white rounded-[20px] overflow-hidden group cursor-pointer transition-transform hover:scale-105 border border-gray-200 shadow-sm flex flex-col h-full max-w-[320px] w-full mx-auto">
+            <div key={product.id} className="bg-gray-200 rounded-[20px] overflow-hidden group cursor-pointer transition-transform hover:scale-105 border border-gray-200 shadow-sm flex flex-col h-full max-w-[320px] w-full mx-auto">
               {/* Discount Badge */}
               <div className="relative">
                 <div
@@ -79,11 +79,11 @@ export default function ProductGrid() {
                 </div>
                 
                 {/* Product Image */}
-                <div className="relative bg-gray-100 flex items-center justify-center p-8 w-[313px] h-[305.46875px] rounded-[20px]">
+                <div className="relative bg-gray-200 flex items-start justify-center p-8 w-[370px] h-[305.46875px] rounded-[20px]  ">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-[313px] h-[305.46875px] opacity-100 rounded-[20px] rotate-0 object-contain"
+                    className="w-[370px] h-[305.46875px] opacity-100 rounded-[20px] rotate-0 object-fill"
                   />
                 </div>
               </div>
