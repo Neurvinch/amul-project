@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+/* Scoped font utilities */
+.font-space-grotesk {
+  font-family: 'Space Grotesk', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.font-bai-jamjuree {
+  font-family: 'Bai Jamjuree', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}

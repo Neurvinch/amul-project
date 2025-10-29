@@ -1,6 +1,6 @@
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
-import Background from '../src/assets/44b68064664628a2db7b4fd033a5752ceffeaeeb.jpg'
+import Background from '../assets/44b68064664628a2db7b4fd033a5752ceffeaeeb.jpg'
 
 const HeroSection = () => {
   return (
@@ -15,7 +15,7 @@ const HeroSection = () => {
         }}
       >
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-500/30 via-purple-600/40 to-teal-500/30" />
+        <div className="absolute inset-0 bg-gradient-to-br" />
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
