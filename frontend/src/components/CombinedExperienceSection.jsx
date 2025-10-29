@@ -83,17 +83,17 @@ export default function CombinedExperienceSection() {
         {/* </div> */}
 
         {/* Content aligned relative on mobile, overlaid on md+ */}
-        <div className="z-10 flex items-center justify-center md:absolute md:inset-0">
+        <div className="z-10 flex items-center justify-center md:absolute md:inset-0 px-2">
           {/* Anchor at image center on md+, normal flow on mobile */}
           <div className="md:relative md:top-1/2 md:left-1/2 md:-translate-y-1/2 md:-translate-x-1/2">
-            <div className="w-[90vw] max-w-[600px] md:w-[540px] md:translate-x-[-60px] md:translate-y-[-180px]">
-              <h2 className="font-space-grotesk text-white text-6xl md:text-7xl font-semibold mb-6 leading-tight">
+            <div className="w-[90vw] max-w-[600px] md:w-[540px] md:translate-x-[-60px] md:translate-y-[-180px] md:bg-transparent bg-black/60 backdrop-blur-sm rounded-2xl p-4 md:p-0 text-center md:text-left">
+              <h2 className="font-space-grotesk text-white text-4xl sm:text-5xl md:text-7xl font-semibold mb-4 md:mb-6 leading-tight">
                 Play from<br />any device.
               </h2>
-              <p className="font-space-grotesk text-white/90 text-xl md:text-2xl mb-4 leading-relaxed">
+              <p className="font-space-grotesk text-white/90 text-base sm:text-lg md:text-2xl mb-3 md:mb-4 leading-relaxed">
                 Your hearing profile is <span className="text-[#7DFB5D]">stored on the earbuds</span>, and is applied to whatever you listen to, <span className="text-[#7DFB5D]">on any device</span>.
               </p>
-              <p className="font-space-grotesk text-white/90 text-xl md:text-2xl leading-relaxed">
+              <p className="font-space-grotesk text-white/90 text-base sm:text-lg md:text-2xl leading-relaxed">
                 Use the Nura app to create a hearing profile, configure touch buttons, adjust immersion mode and more.
               </p>
             </div>
