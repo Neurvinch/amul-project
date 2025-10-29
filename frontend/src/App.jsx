@@ -9,6 +9,7 @@ import FeaturedInSection from './components/FeaturedInSection'
 import SubscriptionSection from './components/SubscriptionSection'
 
 const App = () => {
+  // ok all good now let's put all components together
   return (
     <div>
       <Header/>
@@ -20,6 +21,7 @@ const App = () => {
       <VideoSection/>
       <FeaturedInSection/>
       <Footer/>
+      
     </div>
   )
 }
