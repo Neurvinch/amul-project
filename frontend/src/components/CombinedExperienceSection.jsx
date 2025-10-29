@@ -1,5 +1,7 @@
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
+import PhoneBG from '../assets/6406e5685bba9c4e4bff3cb917c4f0236a49d02c (1).png'
+import PhoneScreen from '../assets/8a0597d96454bc74bbe222c19f0c2ffe0705a3ea (1).png'
 
 // This section combines the previous MobileAppSection and PlayFromAnyDevice
 // Images can be swapped later; structure and styles mirror the reference layout
@@ -7,7 +9,13 @@ export default function CombinedExperienceSection() {
   return (
     <section>
       {/* Block 1: For your ears only. */}
-      <div className="relative bg-gradient-to-br from-[#2D43FF] via-[#3D6CFF] to-[#41B3FF] py-16 md:py-24 px-4 overflow-hidden">
+      <div className="relative py-16 md:py-24 px-4 overflow-hidden">
+        {/* Background Image for Block 1 */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${PhoneBG})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/10 pointer-events-none" />
         <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-10 items-center">
           {/* Phone Mockup */}
           <div className="relative flex justify-center md:justify-start">
@@ -16,7 +24,7 @@ export default function CombinedExperienceSection() {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-black rounded-b-3xl z-20" />
                 <div className="relative w-full h-full bg-white rounded-[42px] overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&q=80"
+                    src={PhoneScreen}
                     alt="Nura App Interface"
                     className="w-full h-full object-cover"
                   />
@@ -65,7 +73,7 @@ export default function CombinedExperienceSection() {
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-black rounded-b-3xl z-20" />
               <div className="relative w-full aspect-[9/19] bg-white rounded-[42px] overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&q=80"
+                  src={PhoneScreen}
                   alt="Nura App"
                   className="w-full h-full object-cover"
                 />
