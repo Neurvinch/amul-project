@@ -11,7 +11,7 @@ export default function Header() {
             <svg className="w-8 h-8 text-white" viewBox="0 0 40 40" fill="currentColor">
               <path d="M20 8C16 8 12 10 10 14C8 18 8 22 10 26C12 30 16 32 20 32C22 32 24 32 26 30L20 20L26 10C24 8 22 8 20 8Z" />
             </svg>
-            <h1 className="text-white text-xl font-bold">nura</h1>
+            <h1 className="text-white text-3xl font-bold">nura</h1>
           </div>
 
           {/* Navigation */}
